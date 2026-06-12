@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "../ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "/#home" },
@@ -11,7 +12,7 @@ const navItems = [
   { label: "Projects", href: "/#projects" },
   { label: "Experience", href: "/#journey" },
   { label: "Skills", href: "/#skills" },
-  { label: "Blog", href: "/#ai-experiments" },
+  // { label: "Blog", href: "/#ai-experiments" },
   { label: "Contact", href: "/#contact" }
 ];
 
@@ -40,9 +41,14 @@ export default function Navbar() {
     <header
       className={`fixed top-0 z-50 w-full transition duration-300 ${
         scrolled
-          ? "bg-[rgba(20,59,46,0.88)] shadow-lg backdrop-blur-md"
-          : "bg-[rgba(20,59,46,1)]"
+          ? "shadow-lg backdrop-blur-md"
+          : ""
       }`}
+      style={{
+        backgroundColor: scrolled
+          ? "var(--navbar-bg-scrolled)"
+          : "var(--navbar-bg)"
+      }}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
         <Link href="/#home" className="flex items-center gap-3 text-white">
@@ -73,20 +79,28 @@ export default function Navbar() {
           >
             Let&apos;s Talk
           </Link>
+          <ThemeToggle />
         </nav>
 
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((prev) => !prev)}
-          className="inline-flex items-center justify-center rounded-full border border-white/40 p-2 text-white lg:hidden"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile: Theme toggle + Hamburger */}
+        <div className="flex items-center gap-3 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((prev) => !prev)}
+            className="inline-flex items-center justify-center rounded-full border border-white/40 p-2 text-white"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="bg-[var(--forest-green)] px-6 pb-6 lg:hidden">
+        <div
+          className="px-6 pb-6 lg:hidden"
+          style={{ backgroundColor: "var(--navbar-bg)" }}
+        >
           <div className="flex flex-col gap-4 text-xs uppercase tracking-[0.25em] text-white">
             {navItems.map((item) => (
               <Link

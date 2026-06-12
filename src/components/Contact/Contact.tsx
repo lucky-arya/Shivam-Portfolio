@@ -45,28 +45,28 @@ export default function Contact() {
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30">
                     <Mail size={16} />
                   </div>
-                  <span>hello@shivam.dev</span>
+                  <span>lklk112111@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30">
                     <Phone size={16} />
                   </div>
-                  <span>+91 12345 67890</span>
+                  <span>+91 7543927096</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30">
                     <MapPin size={16} />
                   </div>
-                  <span>Bangalore, India</span>
+                  <span>Delhi, India</span>
                 </div>
               </div>
 
               <div className="mt-8 flex items-center gap-3">
                 {[
-                  { icon: Github, href: "https://github.com", label: "GitHub" },
-                  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                  { icon: Github, href: "https://github.com/lucky-arya", label: "GitHub" },
+                  { icon: Linkedin, href: "https://linkedin.com/shivam963v", label: "LinkedIn" },
                   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-                  { icon: Instagram, href: "https://instagram.com", label: "Instagram" }
+                  { icon: Instagram, href: "https://instagram.com/shivam254r", label: "Instagram" }
                 ].map((social) => (
                   <a
                     key={social.label}

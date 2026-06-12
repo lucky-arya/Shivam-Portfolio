@@ -1,14 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Monitor, Server, Brain, Wrench } from "lucide-react";
+import { ChevronDown, Monitor, Server, Brain, Wrench, Smartphone } from "lucide-react";
 import { skills } from "@/data/skills";
 
-const categoryIcons = [Monitor, Server, Brain, Wrench];
+const categoryIcons = [Monitor, Server, Brain, Smartphone, Wrench];
 const categoryIconClasses = [
   "tech-cat-icon tech-cat-icon--frontend",
   "tech-cat-icon tech-cat-icon--backend",
   "tech-cat-icon tech-cat-icon--ai",
+  "tech-cat-icon tech-cat-icon--mobile",
   "tech-cat-icon tech-cat-icon--tools"
 ];
 
@@ -26,7 +27,7 @@ export default function TechStack() {
           {skills.map((group, index) => {
             const Icon = categoryIcons[index] || Wrench;
             return (
-              <div key={group.category} className="glass-card p-6 bg-[#dcdbd0]">
+              <div key={group.category} className="glass-card p-6" style={{ backgroundColor: "var(--card-bg-solid)" }}>
                 <div className="flex items-center gap-3 mb-5">
                   <div className={categoryIconClasses[index]}>
                     <Icon size={18} />

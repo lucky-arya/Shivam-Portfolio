@@ -59,7 +59,7 @@ export default function Stats() {
     <section ref={sectionRef} className="pb-12 pt-2 md:pb-16">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:pl-20">
         <p className="section-kicker mb-8">My Achievements</p>
-        <div className="rounded-2xl border border-[var(--sage)] bg-[#dcdbd0] px-6 py-12 shadow-[0_12px_40px_rgba(20,59,46,0.06)] md:px-10 sm:py-8">
+        <div className="rounded-2xl border border-[var(--sage)] bg-[var(--card-bg-solid)] px-6 py-12 shadow-[0_12px_40px_rgba(20,59,46,0.06)] md:px-10 sm:py-8">
           <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-0">
             {metrics.map((metric, index) => {
               const Icon = metric.icon;

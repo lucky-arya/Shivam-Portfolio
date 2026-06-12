@@ -8,7 +8,7 @@ const journeyIcons = [Code2, Code2, Rocket, Brain];
 
 export default function Journey() {
   return (
-    <section id="journey" className="section bg-[#dcdbd0]">
+    <section id="journey" className="section" style={{ backgroundColor: "var(--hero-bg)" }}>
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:pl-20 ">
         <p className="section-kicker">Experience</p>
         <h2 className="section-title mt-4">My Journey</h2>
@@ -54,7 +54,7 @@ export default function Journey() {
               return (
                 <div key={item.year} className="relative">
                   <span
-                    className="absolute top-1 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-[var(--coffee)] bg-[#dcdbd0]"
+                    className="absolute top-1 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-[var(--coffee)] bg-[var(--journey-dot-bg)]"
                     style={{ left: "-25px", transform: "translateX(-50%)" }}
                   >
                     <span className="h-2 w-2 rounded-full bg-[var(--coffee)]" />

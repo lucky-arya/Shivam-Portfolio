@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="home"
       className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-20"
-      style={{ backgroundColor: "#dcdbd0" }}
+      style={{ backgroundColor: "var(--hero-bg)" }}
     >
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 md:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:pl-20">
         {/* ── Left Column: Text Content ── */}
@@ -114,7 +114,8 @@ export default function Hero() {
             {/* Identity card - bottom right */}
             <div
               ref={cardRef}
-              className="absolute -left-28 bottom-8 hidden w-[190px] rounded-2xl border border-white/60 bg-white/75 p-4 shadow-[0_16px_40px_rgba(20,59,46,0.12)] backdrop-blur-md md:block"
+              className="absolute -left-28 bottom-8 hidden w-[190px] rounded-2xl border p-4 shadow-[0_16px_40px_rgba(20,59,46,0.12)] backdrop-blur-md md:block"
+              style={{ background: "var(--identity-card-bg)", borderColor: "var(--identity-card-border)" }}
             >
               <ul className="space-y-3">
                 <li className="flex items-center gap-2.5 text-[0.8rem] text-[var(--forest-green)]">

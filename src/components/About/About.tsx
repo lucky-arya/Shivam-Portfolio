@@ -54,7 +54,8 @@ export default function About() {
                 return (
                   <div
                     key={trait.label}
-                    className="flex items-center gap-2.5 rounded-full border border-white/60 bg-white/80 px-4 py-2 text-[0.78rem] font-medium text-[var(--forest-green)] shadow-[0_8px_20px_rgba(20,59,46,0.08)] backdrop-blur-sm"
+                    className="flex items-center gap-2.5 rounded-full border px-4 py-2 text-[0.78rem] font-medium text-[var(--forest-green)] shadow-[0_8px_20px_rgba(20,59,46,0.08)] backdrop-blur-sm"
+                    style={{ background: "var(--pill-bg)", borderColor: "var(--pill-border)" }}
                   >
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--sage)]">
                       <Icon size={12} />
@@ -89,7 +90,8 @@ export default function About() {
                 return (
                   <div
                     key={trait.label}
-                    className="flex items-center gap-2 rounded-full border border-white/60 bg-white/80 px-3 py-2 text-[0.75rem] font-medium text-[var(--forest-green)]"
+                    className="flex items-center gap-2 rounded-full border px-3 py-2 text-[0.75rem] font-medium text-[var(--forest-green)]"
+                    style={{ background: "var(--pill-bg)", borderColor: "var(--pill-border)" }}
                   >
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--sage)]">
                       <Icon size={10} />

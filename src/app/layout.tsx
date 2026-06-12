@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import LenisScroller from "@/components/LenisScroller";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -51,16 +52,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${cormorant.variable} ${inter.variable} antialiased`}
       >
-        <LenisScroller />
-        <Navbar />
-        <Sidebar />
-        {children}
-        <ScrollToTop />
-        <Footer />
+        <ThemeProvider>
+          <LenisScroller />
+          <Navbar />
+          <Sidebar />
+          {children}
+          <ScrollToTop />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

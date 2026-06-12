@@ -28,7 +28,7 @@ export default function ProjectsPage() {
       {/* Hero banner */}
       <section
         className="relative pt-32 pb-16 md:pt-40 md:pb-20"
-        style={{ backgroundColor: "#dcdbd0" }}
+        style={{ backgroundColor: "var(--hero-bg)" }}
       >
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:pl-20">
           <Link

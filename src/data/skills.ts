@@ -14,6 +14,10 @@ export const skills: SkillGroup[] = [
     items: ["Python", "TensorFlow", "OpenAI API", "LangChain", "Scikit-learn"]
   },
   {
+    category: "Mobile Development",
+    items: ["React Native",  "iOS Development", "Android Development"]
+  },
+  {
     category: "Tools",
     items: ["Git & GitHub", "Docker", "VS Code", "Postman", "Figma"]
   }

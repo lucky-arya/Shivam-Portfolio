@@ -56,7 +56,7 @@ export default function ContactPage() {
       {/* Hero banner */}
       <div
         className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20"
-        style={{ backgroundColor: "#dcdbd0" }}
+        style={{ backgroundColor: "var(--hero-bg)" }}
       >
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:pl-20">
           <Link
@@ -107,7 +107,8 @@ export default function ContactPage() {
             {/* Left: Form */}
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="rounded-3xl border border-[var(--sage)] bg-white/60 p-8 shadow-[0_20px_60px_rgba(20,59,46,0.08)] backdrop-blur-sm md:p-10"
+              className="rounded-3xl border border-[var(--sage)] p-8 shadow-[0_20px_60px_rgba(20,59,46,0.08)] backdrop-blur-sm md:p-10"
+              style={{ background: "var(--form-card-bg)" }}
             >
               <div className="space-y-6">
                 {/* Name */}
@@ -123,7 +124,7 @@ export default function ContactPage() {
                     type="text"
                     {...register("name")}
                     placeholder="John Doe"
-                    className="w-full rounded-xl border border-[var(--sage)] bg-[var(--cream)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
+                    className="w-full rounded-xl border border-[var(--input-border)] bg-[var(--input-bg)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
                   />
                   {errors.name && (
                     <p className="mt-1.5 text-xs text-red-600">{errors.name.message}</p>
@@ -143,7 +144,7 @@ export default function ContactPage() {
                     type="email"
                     {...register("email")}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-[var(--sage)] bg-[var(--cream)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
+                    className="w-full rounded-xl border border-[var(--input-border)] bg-[var(--input-bg)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
                   />
                   {errors.email && (
                     <p className="mt-1.5 text-xs text-red-600">{errors.email.message}</p>
@@ -163,7 +164,7 @@ export default function ContactPage() {
                     type="text"
                     {...register("subject")}
                     placeholder="Project inquiry, collaboration, etc."
-                    className="w-full rounded-xl border border-[var(--sage)] bg-[var(--cream)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
+                    className="w-full rounded-xl border border-[var(--input-border)] bg-[var(--input-bg)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
                   />
                   {errors.subject && (
                     <p className="mt-1.5 text-xs text-red-600">{errors.subject.message}</p>
@@ -183,7 +184,7 @@ export default function ContactPage() {
                     rows={5}
                     {...register("message")}
                     placeholder="Tell me about your project, ideas, or anything you'd like to discuss..."
-                    className="w-full resize-none rounded-xl border border-[var(--sage)] bg-[var(--cream)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
+                    className="w-full resize-none rounded-xl border border-[var(--input-border)] bg-[var(--input-bg)] px-5 py-3.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)] transition focus:border-[var(--forest-green)] focus:outline-none focus:ring-2 focus:ring-[var(--forest-green)]/20"
                   />
                   {errors.message && (
                     <p className="mt-1.5 text-xs text-red-600">{errors.message.message}</p>
@@ -225,7 +226,7 @@ export default function ContactPage() {
             {/* Right: Info cards */}
             <div className="flex flex-col gap-6">
               {/* Quick info card */}
-              <div className="rounded-3xl border border-[var(--sage)] bg-white/60 p-8 shadow-[0_20px_60px_rgba(20,59,46,0.08)] backdrop-blur-sm">
+              <div className="rounded-3xl border border-[var(--sage)] p-8 shadow-[0_20px_60px_rgba(20,59,46,0.08)] backdrop-blur-sm" style={{ background: "var(--form-card-bg)" }}>
                 <h3 className="text-xl font-semibold text-[var(--coffee)]">
                   Quick Contact
                 </h3>
@@ -240,22 +241,22 @@ export default function ContactPage() {
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--sage)]">
                       <Mail size={18} />
                     </span>
-                    hello@shivam.dev
+                    lklk112111@gmail.com
                   </a>
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+917543927096"
                     className="flex items-center gap-3 text-[var(--forest-green)] transition hover:text-[var(--coffee)]"
                   >
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--sage)]">
                       <Phone size={18} />
                     </span>
-                    +91 12345 67890
+                    +91 7543927096
                   </a>
                   <div className="flex items-center gap-3 text-[var(--forest-green)]">
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--sage)]">
                       <MapPin size={18} />
                     </span>
-                    Bangalore, India
+                    Delhi, India
                   </div>
                 </div>
               </div>
@@ -278,7 +279,7 @@ export default function ContactPage() {
               </div>
 
               {/* Quote card */}
-              <div className="rounded-3xl border border-[var(--sage)] bg-[#dcdbd0] p-8">
+              <div className="rounded-3xl border border-[var(--sage)] p-8" style={{ backgroundColor: "var(--card-bg-solid)" }}>
                 <p className="font-heading text-lg italic leading-relaxed text-[var(--coffee)]">
                   &ldquo;Great things are built by people who believe in the power
                   of collaboration.&rdquo;

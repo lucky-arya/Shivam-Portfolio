@@ -2,27 +2,47 @@ import type { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
-    title: "Travel Website",
-    description:
-      "A full stack travel platform with booking, authentication, and payments. Built for seamless experiences.",
-    longDescription:
-      "A comprehensive travel platform that enables users to discover destinations, book trips, and manage itineraries. Features include real-time availability checking, secure payment processing via Stripe, user authentication with OAuth, interactive maps, and a review system. The platform uses server-side rendering for optimal SEO and performance, with a responsive design that works flawlessly across all devices.",
-    tags: ["Next.js", "Tailwind CSS", "MongoDB"],
-    image: "/images/project-travel.svg",
-    github: "https://github.com/shivamkumar/travel-website",
-    demo: "https://travel-demo.vercel.app",
-    features: [
-      "Real-time booking & availability system",
-      "Secure payments via Stripe integration",
-      "OAuth authentication (Google, GitHub)",
-      "Interactive destination maps",
-      "User reviews & ratings system",
-      "Responsive design across all devices"
-    ],
-    role: "Full Stack Developer",
-    duration: "3 months",
-    status: "Completed"
-  },
+  title: "BreatheEasy",
+
+  description:
+    "An AI-powered air quality monitoring platform that predicts AQI levels for the next 24 hours and visualizes pollution trends through interactive heatmaps.",
+
+  longDescription:
+    "BreatheEasy is an environmental intelligence platform designed to help users monitor and anticipate air quality conditions. The application leverages machine learning models to predict Air Quality Index (AQI) values for the next 24 hours and presents the data through intuitive heatmap visualizations. Users can explore pollution trends, identify high-risk areas, analyze historical patterns, and make informed decisions regarding outdoor activities. The platform combines real-time environmental insights with a modern, responsive user experience optimized for both desktop and mobile devices.",
+
+  tags: [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Machine Learning",
+    "AQI Prediction",
+    "Data Visualization",
+    "Environmental Tech"
+  ],
+
+  image: "/images/project-breatheeasy.svg",
+
+  github: "https://github.com/lucky-arya/BreatheEasy",
+
+  demo: "https://breatheeasy.vercel.app",
+
+  features: [
+    "24-hour AQI forecasting using machine learning",
+    "Interactive AQI heatmap visualization",
+    "Real-time air quality monitoring",
+    "Location-based pollution insights",
+    "Historical AQI trend analysis",
+    "Risk-level categorization and alerts",
+    "Responsive dashboard for desktop and mobile",
+    "Data-driven environmental awareness tools"
+  ],
+
+  role: "Full Stack Developer",
+
+  duration: "3 months",
+
+  status: "Completed"
+},
   {
     title: "AI Dashboard",
     description:

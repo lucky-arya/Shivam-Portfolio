@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="bg-[var(--cream)]">
       <Hero />
-      <SectionDivider variant="wave" topColor="#dcdbd0" bottomColor="var(--cream)" />
+      <SectionDivider variant="wave" topColor="var(--hero-bg)" bottomColor="var(--cream)" />
 
       <About />
       <Stats />
@@ -22,19 +22,19 @@ export default function Home() {
 
       <Projects />
 
-      {/* <SectionDivider variant="curve" topColor="var(--cream)" bottomColor="#dcdbd0" />
+      {/* <SectionDivider variant="curve" topColor="var(--cream)" bottomColor="var(--hero-bg)" />
 
       <AIExperiments /> */}
 {/* 
-      <SectionDivider variant="leaf-wave" topColor="#dcdbd0" bottomColor="var(--cream)" /> */}
+      <SectionDivider variant="leaf-wave" topColor="var(--hero-bg)" bottomColor="var(--cream)" /> */}
 
       <TechStack />
 
-      <SectionDivider variant="leaf-wave" topColor="var(--cream)" bottomColor="#dcdbd0" />
+      <SectionDivider variant="leaf-wave" topColor="var(--cream)" bottomColor="var(--hero-bg)" />
 
       <Journey />
 
-      <SectionDivider variant="wave" topColor="#dcdbd0" bottomColor="var(--cream)" />
+      <SectionDivider variant="wave" topColor="var(--hero-bg)" bottomColor="var(--cream)" />
 
       <Testimonials />
 

@@ -5,7 +5,7 @@ import { aiExperiments } from "@/data/aiExperiments";
 
 export default function AIExperiments() {
   return (
-    <section id="ai-experiments" className="section bg-[#dcdbd0]">
+    <section id="ai-experiments" className="section" style={{ backgroundColor: "var(--hero-bg)" }}>
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:pl-20">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
