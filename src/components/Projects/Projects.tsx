@@ -63,7 +63,7 @@ export default function Projects() {
             >
               <div className="project-card-image">
                 <Image
-                  src={project.image}
+                  src={project.images[0]}
                   alt={project.title}
                   width={540}
                   height={420}

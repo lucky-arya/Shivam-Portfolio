@@ -436,7 +436,7 @@ img {
   .project-card-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 6 / 3;
     overflow: hidden;
     background: var(--color-light-green);
   }
@@ -444,7 +444,7 @@ img {
   .project-card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 600ms;
   }
 
@@ -746,9 +746,115 @@ img {
     border-radius: 1.5rem 1.5rem 0 0;
   }
 
+  .project-modal-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-modal-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-modal-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Slider arrows */
+  .project-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(31, 59, 46, 0.55);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    cursor: pointer;
+    transition: background 200ms, transform 200ms, border-color 200ms;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-slider-arrow:hover {
+    background: rgba(31, 59, 46, 0.85);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .project-slider-arrow-left {
+    left: 0.75rem;
+  }
+
+  .project-slider-arrow-right {
+    right: 0.75rem;
+  }
+
+  /* Slider indicators (counter + dots) */
+  .project-slider-indicators {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .project-slider-counter {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #fff;
+    background: rgba(31, 59, 46, 0.55);
+    backdrop-filter: blur(8px);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+  }
+
+  .project-slider-dots {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .project-slider-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 200ms, transform 200ms, border-color 200ms;
+  }
+
+  .project-slider-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.25);
+  }
+
+  .project-slider-dot.active {
+    background: #fff;
+    border-color: #fff;
+    transform: scale(1.25);
+  }
+
   .project-modal-image-overlay {
     position: absolute;
     inset: 0;
+    pointer-events: none;
     background: linear-gradient(
       to bottom,
       transparent 50%,

@@ -2,68 +2,92 @@ import type { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
-  title: "BreatheEasy",
+    title: "BreatheEasy",
 
-  description:
-    "An AI-powered air quality monitoring platform that predicts AQI levels for the next 24 hours and visualizes pollution trends through interactive heatmaps.",
-
-  longDescription:
-    "BreatheEasy is an environmental intelligence platform designed to help users monitor and anticipate air quality conditions. The application leverages machine learning models to predict Air Quality Index (AQI) values for the next 24 hours and presents the data through intuitive heatmap visualizations. Users can explore pollution trends, identify high-risk areas, analyze historical patterns, and make informed decisions regarding outdoor activities. The platform combines real-time environmental insights with a modern, responsive user experience optimized for both desktop and mobile devices.",
-
-  tags: [
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Machine Learning",
-    "AQI Prediction",
-    "Data Visualization",
-    "Environmental Tech"
-  ],
-
-  image: "/images/project-breatheeasy.svg",
-
-  github: "https://github.com/lucky-arya/BreatheEasy",
-
-  demo: "https://breatheeasy.vercel.app",
-
-  features: [
-    "24-hour AQI forecasting using machine learning",
-    "Interactive AQI heatmap visualization",
-    "Real-time air quality monitoring",
-    "Location-based pollution insights",
-    "Historical AQI trend analysis",
-    "Risk-level categorization and alerts",
-    "Responsive dashboard for desktop and mobile",
-    "Data-driven environmental awareness tools"
-  ],
-
-  role: "Full Stack Developer",
-
-  duration: "3 months",
-
-  status: "Completed"
-},
-  {
-    title: "AI Dashboard",
     description:
-      "AI-powered analytics dashboard for business insights, forecasting, and automation workflows.",
+      "An AI-powered air quality monitoring platform that predicts AQI levels for the next 24 hours and visualizes pollution trends through interactive heatmaps.",
+
     longDescription:
-      "An intelligent analytics dashboard that leverages machine learning models for business forecasting and data-driven decision making. The platform processes large datasets in real-time, generates visual reports with interactive charts, and provides automated insights through natural language summaries. Custom ML pipelines handle data preprocessing, model training, and prediction serving through a Python FastAPI backend.",
-    tags: ["React", "Node.js", "Python"],
-    image: "/images/project-ai.svg",
-    github: "https://github.com/shivamkumar/ai-dashboard",
-    demo: "https://ai-dashboard.vercel.app",
-    features: [
-      "Real-time data processing & visualization",
-      "ML-powered business forecasting",
-      "Interactive charts with D3.js & Recharts",
-      "Natural language insight generation",
-      "Custom ML pipeline management",
-      "Role-based access control"
+      "BreatheEasy is an environmental intelligence platform designed to help users monitor and anticipate air quality conditions. The application leverages machine learning models to predict Air Quality Index (AQI) values for the next 24 hours and presents the data through intuitive heatmap visualizations. Users can explore pollution trends, identify high-risk areas, analyze historical patterns, and make informed decisions regarding outdoor activities. The platform combines real-time environmental insights with a modern, responsive user experience optimized for both desktop and mobile devices.",
+
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Machine Learning",
+      "AQI Prediction",
+      "Data Visualization",
+      "Environmental Tech"
     ],
-    role: "AI Engineer & Frontend Developer",
-    duration: "4 months",
-    status: "Maintained"
+
+    images: [
+      "/Project-Images/BreatheEasy/1.png",
+      "/Project-Images/BreatheEasy/2.png",
+      "/Project-Images/BreatheEasy/3.png"
+    ],
+
+    github: "https://github.com/lucky-arya/BreatheEasy",
+
+    demo: "https://breatheeasy-frontend.onrender.com/",
+
+    features: [
+      "24-hour AQI forecasting using machine learning",
+      "Interactive AQI heatmap visualization",
+      "Real-time air quality monitoring",
+      "Location-based pollution insights",
+      "Historical AQI trend analysis",
+      "Risk-level categorization and alerts",
+      "Responsive dashboard for desktop and mobile",
+      "Data-driven environmental awareness tools"
+    ],
+
+    role: "Full Stack Developer",
+
+    duration: "3 months",
+
+    status: "Completed"
+  },
+  {
+    title: "SkillSense",
+    description:
+      "An AI-powered career intelligence platform to diagnose skill gaps, ace mock interviews, analyze resumes, and generate personalized career roadmaps.",
+    longDescription:
+      "SkillSense is a full-stack career intelligence platform built on three microservices — a React frontend, an Express + TypeScript API, and a Python FastAPI ML engine. It combines Groq-powered LLaMA 3.3 70B for deep analysis with a custom ML engine covering 17 skill categories across 5 career roles. Features include an adaptive skill assessment with radar charts, an AI resume analyzer with ATS scoring and 'Roast Mode', voice-enabled mock interviews using Web Speech API, and a personalized career roadmap generator. The platform is fully containerized with Docker Compose and tested with 34 automated tests (Jest + pytest).",
+    tags: [
+      "React 18",
+      "TypeScript",
+      "Express",
+      "FastAPI",
+      "Python",
+      "MongoDB",
+      "Groq AI",
+      "Docker",
+      "Framer Motion",
+      "Tailwind CSS",
+    ],
+    images: [
+      "/Project-Images/SkillSense/1.png",
+      "/Project-Images/SkillSense/2.png",
+      "/Project-Images/SkillSense/3.png",
+      "/Project-Images/SkillSense/4.png",
+
+    ],
+    github: "https://github.com/lucky-arya/SkillSense",
+    demo: "https://skill-sense-client.vercel.app/",
+    features: [
+      "ML-powered skill gap analysis across 17 categories & 5 career roles",
+      "AI resume analyzer with ATS scoring and Roast Mode 🔥",
+      "Voice-enabled AI mock interviews with real-time TTS/STT",
+      "Personalized phased career roadmap (Beginner → Expert)",
+      "AI career coach chat powered by LLaMA 3.3 70B (Groq)",
+      "Adaptive AI-generated assessments (MCQ + scenario-based)",
+      "Recharts skill dashboard with progress tracking & history",
+      "Docker Compose one-command deployment with nginx reverse proxy",
+      "34 automated tests across Jest & pytest",
+    ],
+    role: "Full Stack & AI Engineer",
+    duration: "2 months",
+    status: "Completed",
   },
   {
     title: "Recipe Finder",
@@ -72,7 +96,9 @@ export const projects: Project[] = [
     longDescription:
       "A beautifully designed recipe discovery application that connects to multiple food APIs to provide thousands of recipes. Users can search by ingredients, dietary preferences, cuisine type, and cooking time. The app features a personalized favorites system, meal planning capabilities, nutritional information display, and step-by-step cooking instructions with timers. Built with a focus on accessibility and delightful micro-interactions.",
     tags: ["Next.js", "API", "Tailwind CSS"],
-    image: "/images/project-recipe.svg",
+    images: [
+      "/Project-Images/Recipe-Finder/1.png"
+    ],
     github: "https://github.com/shivamkumar/recipe-finder",
     demo: "https://recipe-finder.vercel.app",
     features: [
@@ -94,7 +120,9 @@ export const projects: Project[] = [
     longDescription:
       "A high-end editorial portfolio website designed for a creative studio, featuring cinematic scroll-driven animations, custom cursor interactions, and bespoke page transitions. The site uses GSAP and Framer Motion for fluid animations, with a focus on typography, whitespace, and visual storytelling. Each project page features immersive full-screen galleries, video integration, and smooth parallax effects that create a premium browsing experience.",
     tags: ["GSAP", "Framer Motion", "TypeScript"],
-    image: "/images/project-studio.svg",
+    images: [
+      "/Project-Images/Studio-Portfolio/1.png"
+    ],
     github: "https://github.com/shivamkumar/studio-portfolio",
     demo: "https://studio-portfolio.vercel.app",
     features: [

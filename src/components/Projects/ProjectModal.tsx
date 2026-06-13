@@ -10,9 +10,11 @@ import {
   User,
   CheckCircle2,
   Sparkles,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import type { Project } from "@/types/portfolio";
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -25,6 +27,29 @@ export default function ProjectModal({
   isOpen,
   onClose,
 }: ProjectModalProps) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const images = project?.images ?? [];
+  const totalSlides = images.length;
+  const hasMultipleSlides = totalSlides > 1;
+
+  const goToSlide = useCallback(
+    (index: number) => {
+      if (index < 0) setCurrentSlide(totalSlides - 1);
+      else if (index >= totalSlides) setCurrentSlide(0);
+      else setCurrentSlide(index);
+    },
+    [totalSlides]
+  );
+
+  const nextSlide = useCallback(() => goToSlide(currentSlide + 1), [currentSlide, goToSlide]);
+  const prevSlide = useCallback(() => goToSlide(currentSlide - 1), [currentSlide, goToSlide]);
+
+  // Reset slide index when project changes
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [project]);
+
   // Lock body scroll AND pause Lenis when modal is open
   useEffect(() => {
     if (isOpen) {
@@ -40,16 +65,18 @@ export default function ProjectModal({
     };
   }, [isOpen]);
 
-  // Close on Escape key
+  // Close on Escape key, arrow key navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
+      if (hasMultipleSlides && e.key === "ArrowLeft") prevSlide();
+      if (hasMultipleSlides && e.key === "ArrowRight") nextSlide();
     };
     if (isOpen) {
       window.addEventListener("keydown", handleKeyDown);
     }
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, hasMultipleSlides, prevSlide, nextSlide]);
 
   if (!project) return null;
 
@@ -97,15 +124,68 @@ export default function ProjectModal({
               <X size={20} />
             </button>
 
-            {/* Image header */}
+            {/* Image slider */}
             <div className="project-modal-image">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={800}
-                height={450}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
+              <div className="project-modal-slider">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSlide}
+                    className="project-modal-slide"
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -30 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                  >
+                    <Image
+                      src={images[currentSlide]}
+                      alt={`${project.title} — screenshot ${currentSlide + 1}`}
+                      width={800}
+                      height={450}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Navigation arrows */}
+                {hasMultipleSlides && (
+                  <>
+                    <button
+                      className="project-slider-arrow project-slider-arrow-left"
+                      onClick={prevSlide}
+                      aria-label="Previous image"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button
+                      className="project-slider-arrow project-slider-arrow-right"
+                      onClick={nextSlide}
+                      aria-label="Next image"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                  </>
+                )}
+
+                {/* Slide counter & dots */}
+                {hasMultipleSlides && (
+                  <div className="project-slider-indicators">
+                    <span className="project-slider-counter">
+                      {currentSlide + 1} / {totalSlides}
+                    </span>
+                    <div className="project-slider-dots">
+                      {images.map((_, i) => (
+                        <button
+                          key={i}
+                          className={`project-slider-dot${i === currentSlide ? " active" : ""}`}
+                          onClick={() => goToSlide(i)}
+                          aria-label={`Go to image ${i + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <div className="project-modal-image-overlay" />
             </div>
 

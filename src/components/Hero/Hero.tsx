@@ -122,7 +122,7 @@ export default function Hero() {
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--sage)]">
                     <Settings size={12} />
                   </span>
-                  AI Engineer
+                  Mobile App Dev
                 </li>
                 <li className="flex items-center gap-2.5 text-[0.8rem] text-[var(--forest-green)]">
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--sage)]">
@@ -134,7 +134,7 @@ export default function Hero() {
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--sage)]">
                     <Shield size={12} />
                   </span>
-                  Cybersecurity
+                  AI & ML
                   <br />
                   Enthusiast
                 </li>
