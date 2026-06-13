@@ -45,7 +45,7 @@ export default function Hero() {
         {/* ── Left Column: Text Content ── */}
         <div className="flex flex-col justify-center">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[var(--forest-green)]">
-            AI Engineer & Full Stack Developer
+          Web & Mobile App Developer with AI & ML Enthusiast
           </p>
 
           <motion.h1
@@ -55,7 +55,7 @@ export default function Hero() {
             className="mt-5 text-balance leading-[1.1] text-[var(--coffee)]"
             style={{ fontSize: "clamp(2.6rem, 5vw, 4.5rem)" }}
           >
-            Building Digital
+            Building Digital  
             <br />
             Experiences
             <br />
@@ -86,7 +86,9 @@ export default function Hero() {
               View My Work
             </a>
             <a
-              href="/resume/Shivam-Kumar-Resume.pdf"
+              href="https://drive.google.com/file/d/1Hx2cL-I8MKCfMtgzeXMfrkz41AggYiyI/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-[var(--coffee)] px-7 py-3 text-[0.75rem] font-medium uppercase tracking-[0.2em] text-[var(--coffee)] transition hover:translate-y-[-2px] hover:bg-[var(--forest-green)] hover:text-[var(--cream)]"
             >
               Download Resume

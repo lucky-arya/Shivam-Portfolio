@@ -40,7 +40,7 @@ export default function About() {
           {/* Right Column: Image + Trait Pills */}
           <div className="relative">
             <Image
-              src="/images/about-workspace.svg"
+              src="/images/AboutMe.png"
               alt="Workspace"
               width={520}
               height={400}

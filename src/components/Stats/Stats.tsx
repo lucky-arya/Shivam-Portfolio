@@ -7,7 +7,7 @@ const metrics = [
   { label: "Projects\nCompleted", value: 10, suffix: "+", icon: FolderOpen },
   { label: "DSA Problems\nSolved", value: 500, suffix: "+", icon: Code2 },
   { label: "Hackathons\nParticipated", value: 5, suffix: "+", icon: Trophy },
-  { label: "Internships\nCompleted", value: 3, suffix: "+", icon: Briefcase }
+  { label: "Freelancing\nProjects", value: 4, suffix: "+", icon: Briefcase }
 ];
 
 export default function Stats() {

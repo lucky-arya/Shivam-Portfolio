@@ -64,9 +64,8 @@ export default function Contact() {
               <div className="mt-8 flex items-center gap-3">
                 {[
                   { icon: Github, href: "https://github.com/lucky-arya", label: "GitHub" },
-                  { icon: Linkedin, href: "https://linkedin.com/shivam963v", label: "LinkedIn" },
-                  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-                  { icon: Instagram, href: "https://instagram.com/shivam254r", label: "Instagram" }
+                  { icon: Linkedin, href: "https://linkedin.com/in/shivam254r", label: "LinkedIn" },
+                  {icon: Twitter, href: "https://twitter.com/shivam254r", label: "Twitter"},
                 ].map((social) => (
                   <a
                     key={social.label}
