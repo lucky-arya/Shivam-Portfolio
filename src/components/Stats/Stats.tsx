@@ -67,7 +67,7 @@ export default function Stats() {
               return (
                 <div
                   key={metric.label}
-                  className={`flex flex-row items-center gap-2 text-center ${
+                  className={`min-w-0 flex flex-col sm:flex-row items-center sm:items-center gap-2 text-center sm:text-left ${
                     index < metrics.length - 1
                       ? "lg:border-r lg:border-[var(--sage)]"
                       : ""
@@ -80,7 +80,7 @@ export default function Stats() {
                     {counts[index]}
                     {metric.suffix}
                   </span>
-                  <span className="text-[0.7rem] leading-tight uppercase tracking-[0.15em] text-[var(--muted)]">
+                  <span className="text-[0.7rem] leading-tight uppercase tracking-[0.15em] text-[var(--muted)] whitespace-normal break-words">
                     {labelParts.map((part, i) => (
                       <span key={i}>
                         {part}

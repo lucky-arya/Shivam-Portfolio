@@ -14,6 +14,6 @@ export const testimonials: Testimonial[] = [
     role: "Faculty Mentor",
     quote:
       "Shivam is a dedicated learner and a problem solver. He has a strong understanding of concepts and always puts in the extra effort.",
-    image: "/Testimonial-Images/neerajkumar.png"
+    image: "/Testimonials-Images/neerajkumar.png"
   }
 ];
