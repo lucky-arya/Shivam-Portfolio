@@ -73,7 +73,7 @@ export default function About() {
               ))}
             </div>
 
-            {/* Leaf decoration */}
+            {/* Leaf decoration
             <div className="absolute -bottom-6 -right-10 hidden w-20 opacity-50 md:block">
               <Image
                 src="/images/leaf.svg"
@@ -81,7 +81,7 @@ export default function About() {
                 width={80}
                 height={140}
               />
-            </div>
+            </div> */}
 
             {/* Mobile traits */}
             <div className="mt-5 grid grid-cols-2 gap-2.5 md:hidden">

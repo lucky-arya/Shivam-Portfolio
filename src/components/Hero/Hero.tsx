@@ -105,7 +105,7 @@ export default function Hero() {
           <div className="relative">
             {/* Portrait image */}
             <Image
-              src="/images/portrait.svg"
+              src="/profile/shivam_kumar.jpeg"
               alt="Shivam Kumar portrait"
               width={380}
               height={480}
